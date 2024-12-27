@@ -34,4 +34,23 @@ class Database
 			die("Connection failed: " . $this->mysql->connect_error);
 		}
 	}
+
+	public function useDatabase(string $database) : void
+	{
+		$this->database = $database;
+
+		$this->mysql->query("USE {$this->database}");
+	}
+
+	public function tryQuery(string $sql) : void
+	{
+		try
+		{
+			$this->mysql->query($sql);
+		}
+		catch (mysqli_sql_exception $e)
+		{
+			return;
+		}
+	}
 }
