@@ -14,7 +14,7 @@ class LetterController
 		}
 	}
 
-	public function show($id) : void
+	public function show(string $id) : void
 	{
 		if (!is_numeric($id))
 		{
