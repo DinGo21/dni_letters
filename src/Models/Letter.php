@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use App\Database;
 
@@ -13,7 +13,7 @@ class Letter
 
 	public function __construct(string $letter = "", ?int $id = null)
 	{
-		$this->db = new Database("letters");
+		$this->db = new Database();
 		$this->id = $id;
 		$this->letter = $letter;
 	}
@@ -30,10 +30,10 @@ class Letter
 
 	public static function find(int $id) : Letter
 	{
-		$db = new Database("letters");
+		$db = new Database();
 		$query = $db->mysql->query("SELECT * FROM letters WHERE `id` = {$id}");
-		$result = $query->fetchAll();
+		$result = $query->fetch_assoc();
 
-		return new Letter($result[0]["letter"], $result[0]["id"]);
+		return new Letter($result["letter"], $result["id"]);
 	}
 };

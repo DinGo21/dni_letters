@@ -15,7 +15,7 @@ class Database
 	private string $database;
 
 	public function __construct(string $servername = "localhost", string $username = "root", string $password = "",
-								string $database = "")
+								string $database = "letters")
 	{
 		$this->servername = $servername;
 		$this->username = $username;
