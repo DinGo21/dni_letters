@@ -3,23 +3,8 @@
 require ("vendor/autoload.php");
 
 use PHPUnit\Framework\TestCase;
-// use SebastianBergmann\CodeCoverage\Filter;
-// use SebastianBergmann\CodeCoverage\Driver\Selector;
-// use SebastianBergmann\CodeCoverage\CodeCoverage;
-// use SebastianBergmann\CodeCoverage\Report\Html\Facade as HtmlReport;
-
 use App\Models\Letter;
 use App\Controllers\LetterController;
-
-// $filter = new Filter();
-// $filter->includeDirectory('/xampp/htdocs/dni_letters/src/Models');
- 
-// $coverage = new CodeCoverage(
-//     (new Selector)->forLineCoverage($filter),
-//     $filter
-// );
-
-// $coverage->start('testlul');
 
 class LetterTest extends TestCase
 {
@@ -47,7 +32,3 @@ class LetterTest extends TestCase
 		$controller->show("null");
 	}
 }
-
-// $coverage->stop();
-
-// (new HtmlReport)->process($coverage, '/xammp/htdocs/dni_letters/coverage-report');
