@@ -8,7 +8,7 @@ class LetterController
 {
 	public function __construct()
 	{
-		if ($_SERVER["REQUEST_METHOD"] === "GET" && isset($_GET["dni"]))
+		if (isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] === "GET" && isset($_GET["dni"]))
 		{
 			$this->show($_GET["dni"]);
 		}

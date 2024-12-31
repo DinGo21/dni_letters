@@ -11,5 +11,9 @@
         "psr-4": {
             "Tests\\": "tests"
         }
+    },
+    "require-dev": {
+        "phpunit/php-code-coverage": "^9.2",
+        "phpunit/phpunit": "^9"
     }
 }
