@@ -47,3 +47,5 @@ foreach ($letters as $letter)
 		die("Cannot insert element into table: " . mysqli_error($conn));
 	}
 }
+
+echo "Database successfully imported";
