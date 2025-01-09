@@ -26,7 +26,7 @@ class LetterTest extends TestCase
 
 	public function test_showInvalidRequest() : void
 	{
-		$this->expectOutputString("Value must contain only numbers");
+		$this->expectOutputString("Value is incorrect");
 
 		$controller = new LetterController();
 		$controller->show("null");
