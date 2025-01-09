@@ -16,9 +16,9 @@ class LetterController
 
 	public function show(string $id) : void
 	{
-		if (!is_numeric($id))
+		if (!is_numeric($id) || strlen($id) > 8)
 		{
-			echo "Value must contain only numbers";
+			echo "Value is incorrect";
 			return;
 		}
 		$letter = Letter::find(((int)$id % 23) + 1);
